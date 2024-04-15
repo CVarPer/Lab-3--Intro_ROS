@@ -91,11 +91,17 @@ De forma preliminar, como es habitual, se incluyeron las librerías correspondie
 ```Twist```: Es el tipo de mensaje que se utiliza para enviar comandos de velocidad a la tortuga.
 ```TeleportAbsolute TeleportRelative```: Son los servicios que se utilizan para mover la tortuga a una posición absoluta o relativa.
 
-#### Definición de funciones
+#### Definición de funciones Propias
 ```getKey()```: Esta función se encarga de leer la tecla presionada por el usuario.
 ```movTortuga(key)```: Esta función determina qué acción tomar en función de la tecla presionada y publica el mensaje derotate velocidad correspondiente.
 ```Retorno()```: Esta función llama al servicio turtle1/teleport_absolute para resetear la posición de la tortuga al centro del área de trabajo.
 ```Giro180()```: Esta función llama al servicio turtle1/teleport_relative para rotar la tortuga 180 grados en su posición actual.
+#### Definicion de funciones ROSPy
+```rospy.wait_for_service(service,timeout=None)``` Función que bloquea el codigo hasta que el servicio (service) (En este caso  ```teleport_absolute``` y ```teleport_relative```) este habilitado.
+```rospy.ServiceProxy('service_name', my_package.srv.Foo)```Llama el servicio "service_name", en este caso,  ```teleport_absolute``` y ```teleport_relative```) este habilitado.
+```rospy.init_node('my_node_name')``` Crea un proceso Nodo "my_node_name".
+```rospy.Publisher('topic_name', std_msgs.msg.String, queue_size=10)``` Clase que publica al topic, con un formato de mensaje y una cola para manejo asincrono (ignorable).
+
 
 Ahora bien, en cuanto al funcionamiento general del código, primero se inicializa el nodo correspondiente al nombre del script, y se publica el tópico ```turtle1/cmd_vel``` para realizar la conexión con *turtlesim*. Por su parte, el objeto Twist almacena los valores de velocidad lineal y angular.
 
