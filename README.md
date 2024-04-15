@@ -30,9 +30,9 @@
     <li>
       <a href="#Desarrollo">Desarrollo</a>
       <ul>
-        <li><a href="#met">Metodología</a></li>
-        <li><a href="#mat">Matlab</a></li>
-        <li><a href="#mat">Python</a></li>
+        <li><a href="#Metodología">Metodología</a></li>
+        <li><a href="#Matlab">Matlab</a></li>
+        <li><a href="#Python">Python</a></li>
       </ul>
     </li>
     <li><a href="#Conclusiones">Conclusiones</a></li>
@@ -68,18 +68,18 @@ Los códigos realizados en este apartado pueden ser encontrados en la sección: 
 
 1. En este caso, se solicitaba la suscripción al tópico de pose de la interfaz gráfica de la tortuga. 
 
-- Se utiliza ```rossubscriber``` para crear un suscriptor para el tópico de pose.
-- Se recibe el último mensaje de pose utilizando ```receive``` con la opción 1 para obtener solo el último mensaje.
-- Se muestra la información de la pose recibida.
+  - Se utiliza ```rossubscriber``` para crear un suscriptor para el tópico de pose.
+  - Se recibe el último mensaje de pose utilizando ```receive``` con la opción 1 para obtener solo el último mensaje.
+  - Se muestra la información de la pose recibida.
 
 
 2. Posteriormente se solicita enviar los valores asociados a la pose de la tortuga.
 
-    - Se crea un publicador para el tópico de comandos de velocidad.
-    - Se crea un mensaje de velocidad y se asignan valores de velocidad lineal y angular al mensaje.
-    - Se envía el mensaje de velocidad al publicador.
-    - Se hace una pausa de 1 segundo para permitir que la tortuga se mueva durante ese tiempo.
-    - Se cierra la conexión con ROS al finalizar.
+  - Se crea un publicador para el tópico de comandos de velocidad.
+  - Se crea un mensaje de velocidad y se asignan valores de velocidad lineal y angular al mensaje.
+  - Se envía el mensaje de velocidad al publicador.
+  - Se hace una pausa de 1 segundo para permitir que la tortuga se mueva durante ese tiempo.
+  - Se cierra la conexión con ROS al finalizar.
 
 ### Python
 
@@ -101,7 +101,7 @@ Ahora bien, en cuanto al funcionamiento general del código, primero se iniciali
 
 El código realizado puede ser consultado en la sección ```turtle_sim/scripts/myTeleopKey.py```. 
 
-Se presenta también un video del programa en funcionamiento:
+Se presenta también un video del programa en funcionamiento (hacer click en la imagen):
 
 [![turtle](/recursos/turtle.png)](https://youtu.be/jihc9vAioDU) 
 
