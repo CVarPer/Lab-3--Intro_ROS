@@ -11,7 +11,7 @@ def getKey():
     tty.setraw(sys.stdin.fileno())
     select.select([sys.stdin], [], [], 0)
     key = sys.stdin.read(1)
-    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+    termios.tcsetattr(sys.stdin.fileno(), termios.TCSADRAIN, settings)
     return key
 
 # Función para mover la tortuga
@@ -26,7 +26,7 @@ def movTortuga(key):
         twist.angular.z = 1
     elif key == 'r':
         Retorno()
-    elif key == 'space':
+    elif key == ' ':
         Giro180()
     else:
         pass
