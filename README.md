@@ -9,7 +9,7 @@
     <img src="recursos/UNAL.png" alt="Logo" width="200">
   </a>
 
-  <h3 align="center">Laboratorio 2: Manejo y programación de robot de 6 ejes (Epson)</h3>
+  <h3 align="center">Laboratorio 3: Introducción a ROS</h3>
 
   <p align="center">Robótica
     <br />
@@ -31,10 +31,11 @@
       <a href="#Desarrollo">Desarrollo</a>
       <ul>
         <li><a href="#met">Metodología</a></li>
-        <li><a href="#spel">Código en SPEL+</a></li>
+        <li><a href="#mat">Matlab</a></li>
+        <li><a href="#mat">Python</a></li>
       </ul>
     </li>
-    <li><a href="#Resultados">Resultados</a></li>
+    <li><a href="#Conclusiones">Conclusiones</a></li>
   </ol>
 </details>
 
